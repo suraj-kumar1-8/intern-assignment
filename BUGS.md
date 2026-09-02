@@ -1,6 +1,6 @@
 
 
-BUG-1 — Expenses were sorted in the wrong order
+#BUG-1 — Expenses were sorted in the wrong order
 Reproduce: Open the app. The list says "Newest first," but the oldest expense (Wine, 7 Mar) was showing at the top and the newest (Board game, 15 Mar) was near the bottom.
 Problem: The list was sorted oldest-to-newest instead of newest-to-oldest. On top of that, the function converting dates into numbers wasn't working correctly (it produced NaN).
 Fix: Fixed the date-to-number conversion, and flipped the sort order so the newest expense shows first.
